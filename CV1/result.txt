@@ -1,0 +1,144 @@
+sunny hot high TRUE
+sunny hot high FALSE
+sunny hot high 
+sunny hot normal TRUE
+sunny hot normal FALSE
+sunny hot normal 
+sunny hot  TRUE
+sunny hot  FALSE
+sunny hot  
+sunny mild high TRUE
+sunny mild high FALSE
+sunny mild high 
+sunny mild normal TRUE
+sunny mild normal FALSE
+sunny mild normal 
+sunny mild  TRUE
+sunny mild  FALSE
+sunny mild  
+sunny coll high TRUE
+sunny coll high FALSE
+sunny coll high 
+sunny coll normal TRUE
+sunny coll normal FALSE
+sunny coll normal 
+sunny coll  TRUE
+sunny coll  FALSE
+sunny coll  
+sunny  high TRUE
+sunny  high FALSE
+sunny  high 
+sunny  normal TRUE
+sunny  normal FALSE
+sunny  normal 
+sunny   TRUE
+sunny   FALSE
+sunny   
+overcast hot high TRUE
+overcast hot high FALSE
+overcast hot high 
+overcast hot normal TRUE
+overcast hot normal FALSE
+overcast hot normal 
+overcast hot  TRUE
+overcast hot  FALSE
+overcast hot  
+overcast mild high TRUE
+overcast mild high FALSE
+overcast mild high 
+overcast mild normal TRUE
+overcast mild normal FALSE
+overcast mild normal 
+overcast mild  TRUE
+overcast mild  FALSE
+overcast mild  
+overcast coll high TRUE
+overcast coll high FALSE
+overcast coll high 
+overcast coll normal TRUE
+overcast coll normal FALSE
+overcast coll normal 
+overcast coll  TRUE
+overcast coll  FALSE
+overcast coll  
+overcast  high TRUE
+overcast  high FALSE
+overcast  high 
+overcast  normal TRUE
+overcast  normal FALSE
+overcast  normal 
+overcast   TRUE
+overcast   FALSE
+overcast   
+rainy hot high TRUE
+rainy hot high FALSE
+rainy hot high 
+rainy hot normal TRUE
+rainy hot normal FALSE
+rainy hot normal 
+rainy hot  TRUE
+rainy hot  FALSE
+rainy hot  
+rainy mild high TRUE
+rainy mild high FALSE
+rainy mild high 
+rainy mild normal TRUE
+rainy mild normal FALSE
+rainy mild normal 
+rainy mild  TRUE
+rainy mild  FALSE
+rainy mild  
+rainy coll high TRUE
+rainy coll high FALSE
+rainy coll high 
+rainy coll normal TRUE
+rainy coll normal FALSE
+rainy coll normal 
+rainy coll  TRUE
+rainy coll  FALSE
+rainy coll  
+rainy  high TRUE
+rainy  high FALSE
+rainy  high 
+rainy  normal TRUE
+rainy  normal FALSE
+rainy  normal 
+rainy   TRUE
+rainy   FALSE
+rainy   
+ hot high TRUE
+ hot high FALSE
+ hot high 
+ hot normal TRUE
+ hot normal FALSE
+ hot normal 
+ hot  TRUE
+ hot  FALSE
+ hot  
+ mild high TRUE
+ mild high FALSE
+ mild high 
+ mild normal TRUE
+ mild normal FALSE
+ mild normal 
+ mild  TRUE
+ mild  FALSE
+ mild  
+ coll high TRUE
+ coll high FALSE
+ coll high 
+ coll normal TRUE
+ coll normal FALSE
+ coll normal 
+ coll  TRUE
+ coll  FALSE
+ coll  
+  high TRUE
+  high FALSE
+  high 
+  normal TRUE
+  normal FALSE
+  normal 
+   TRUE
+   FALSE
+   
