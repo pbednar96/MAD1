@@ -17,6 +17,9 @@ class GUI_k_means:
         self.path_data.insert(0, '/home/petr/Documents/test1.csv')
         self.path_data.focus_force()
 
+        self.num_iter.insert(0, '1')
+        self.num_iter.focus_force()
+
         self.separator_csv.insert(0, ';')
         self.separator_csv.focus_force()
 
@@ -47,7 +50,7 @@ class GUI_k_means:
         elif all(type(x) is str for x in list_data[3]) == True:
             self.l_result['text'] = f"Data contain string."
         else:
-            centroid, clusters, sum = k_means.k_means(list_data, self.num_clusters.get())
+            centroid, clusters, sum = k_means.k_means(list_data, self.num_clusters.get(), self.num_iter.get())
             SSE = k_means.SSE(centroid, clusters, self.num_clusters.get())
             self.l_result['text'] = f"Final centroid : {centroid} \n Num. recalculations : {sum} \n SSE: {SSE} "
             self.clu = clusters
@@ -121,15 +124,21 @@ class GUI_k_means:
         self.num_clusters = Entry(self.inputdata, width=40)
         self.num_clusters.pack(padx=8, pady=3)
 
+        self.l_numiter = Label(self.inputdata, text="Number iterations:")
+        self.l_numiter.pack(fill=X, padx=8, pady=1)
+        self.num_iter = Entry(self.inputdata, width=40)
+        self.num_iter.pack(padx=8, pady=3)
+
+
         self.first_init()
 
         self.vysf = Frame(self.top, relief=GROOVE, borderwidth=2)
         self.vysf.pack(fill=BOTH, padx=4, pady=4, expand=1, side=LEFT)
 
-        self.lvys = Label(self.vysf, text="Vysledek")
+        self.lvys = Label(self.vysf, text="Result")
         self.lvys.pack()
 
-        self.l_result = Label(self.vysf, text="Zatim zadny vysledek", relief=SUNKEN, borderwidth=2)
+        self.l_result = Label(self.vysf, text="No result", relief=SUNKEN, borderwidth=2)
         self.l_result.pack(fill=BOTH, padx=4, pady=4, ipadx=4, ipady=4)
 
         self.buttf = Frame(self.vysf)
@@ -138,7 +147,7 @@ class GUI_k_means:
         self.buttgrapf = Button(self.buttf, text="Graph", width=10, command=self.grapf)
         self.buttgrapf.pack(side=LEFT)
 
-        self.buttv = Button(self.buttf, text="Vyresit", width=10, command=self.solution)
+        self.buttv = Button(self.buttf, text="Solve", width=10, command=self.solution)
         self.buttv.pack(side=LEFT)
 
         self.buttk = Button(self.buttf, text="QUIT", width=10, command=root.quit)
