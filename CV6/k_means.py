@@ -82,10 +82,9 @@ def SSE(centroids, clusters, num_clusters):
             m += distance(x, centroids[i])
             total_sum_SSE += m
         print(f"Cluster {i + 1}:")
-        print(f"SSE value: {m}")
         print(f"Element in cluster: {len(clusters[i])}")
         print("")
-    print(f'Sum SSE:{total_sum_SSE}')
+    print(f'SSE:{total_sum_SSE}')
 
 
 def main():
@@ -101,7 +100,6 @@ def main():
             last_centroids = centroids
         else:
             break
-    print("SSE for centroids:")
     SSE(centroids, clusters, NUM_CLUSTERS)
 
 
