@@ -17,6 +17,10 @@ def get_names_collumn(filename, separator):
     words = first_line.split(separator)
     return words
 
+def data_about_input_file(list_data,seperator, filename):
+    string_input = f'INPUT: \n Path to file: {filename} \n Seperator: {seperator} \n Number instance: {len(list_data)} \n Number attributes in file: {len(list_data[0])} \nOUTPUT:\n'
+    return string_input
+
 
 def raw_data_as_list(filename, separator):
     list_data = []
@@ -25,6 +29,15 @@ def raw_data_as_list(filename, separator):
             reader = csv.reader(f, delimiter=separator)
             for row in reader:
                 list_data.append(row)
+    return list_data
+
+def remove_empty_collumn(list_data):
+    empty_rows = []
+    for item in list_data:
+            if '' in item:
+              empty_rows.append(item)
+    for x in empty_rows:
+        list_data.remove(x)
     return list_data
 
 

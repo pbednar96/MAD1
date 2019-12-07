@@ -42,7 +42,14 @@ class GUI_k_means:
         else:
             self.l_result['text'] = "Path to csv file doesn't exist or file is not csv."
 
+
         list_data = preprocessing_data.raw_data_as_list(self.path_data.get(), self.separator_csv.get())
+        list_data = preprocessing_data.remove_empty_collumn(list_data)
+        with open('out.txt', 'w+') as f:
+            f.write(preprocessing_data.data_about_input_file(list_data,self.separator_csv.get(), self.path_data.get()))
+        f.close
+
+
         list_data = preprocessing_data.remove_collumns_in_list(self.columns.get(), list_data, self.path_data.get(),
                                                                self.separator_csv.get())
         if list_data == -1:
@@ -52,8 +59,13 @@ class GUI_k_means:
         else:
             centroid, clusters, sum = k_means.k_means(list_data, self.num_clusters.get(), self.num_iter.get())
             SSE = k_means.SSE(centroid, clusters, self.num_clusters.get())
-            self.l_result['text'] = f"Final centroid : {centroid} \n Num. recalculations : {sum} \n SSE: {SSE} "
+            self.l_result['text'] = f" Final centroid : {centroid} \n Num. recalculations : {sum} \n SSE: {SSE} "
+            tmp =  self.l_result['text']
             self.clu = clusters
+
+        with open('out.txt', 'a+') as f:
+            print(f'{ tmp }', file=f)
+        f.close
 
     def grapf(self):
         if self.clu == []:
