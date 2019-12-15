@@ -59,12 +59,16 @@ class GUI_k_means:
         else:
             centroid, clusters, sum = k_means.k_means(list_data, self.num_clusters.get(), self.num_iter.get())
             SSE = k_means.SSE(centroid, clusters, self.num_clusters.get())
-            self.l_result['text'] = f" Final centroid : {centroid} \n Num. recalculations : {sum} \n SSE: {SSE} "
-            tmp =  self.l_result['text']
+            tmp_name_ommited = self.columns.get().split(',')
+            collumns_names = preprocessing_data.get_names_collumn(self.path_data.get(),self.separator_csv.get())
+            self.l_result['text'] = f" Final centroid : {centroid} \n Num. recalculations : {sum} \n SSE: {SSE} \n Attributes: {list(set(collumns_names) - set(tmp_name_ommited))}"
+            tmp = self.l_result['text']
             self.clu = clusters
 
         with open('out.txt', 'a+') as f:
             print(f'{ tmp }', file=f)
+            for index in range(len(clusters)):
+                print(f'Cluster {index}: {len(clusters[index])}', file=f)
         f.close
 
     def grapf(self):
